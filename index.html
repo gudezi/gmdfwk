@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="estilos.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+
+ var viewportwidth;
+ var viewportheight;
+ 
+ // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+ 
+ if (typeof window.innerWidth != 'undefined')
+ {
+      viewportwidth = window.innerWidth,
+      viewportheight = window.innerHeight
+ }
+ 
+// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+
+ else if (typeof document.documentElement != 'undefined'
+     && typeof document.documentElement.clientWidth !=
+     'undefined' && document.documentElement.clientWidth != 0)
+ {
+       viewportwidth = document.documentElement.clientWidth,
+       viewportheight = document.documentElement.clientHeight
+ }
+ 
+ // older versions of IE
+ 
+ else
+ {
+       viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+       viewportheight = document.getElementsByTagName('body')[0].clientHeight
+ }
+//document.write('<p>Your viewport width is '+viewportwidth+'x'+viewportheight+'</p>');
+//-->
+</script>
+</head>
+
+<body id='body'>
+<div id='encabezado'>
+encabezado
+</div>
+<div id='cuerpo'>
+<div id='menu'>
+menu</div>
+<div id='datos'>
+  <p>datos</p>
+  <p>&nbsp;</p>
+</div>
+</div>
+<div id='pie'>
+pie
+</div>
+</body>
+</html>
+<script>
+var port=viewportheight-140-40-20;
+var port2=viewportwidth-14;
+//alert(port2);
+document.getElementById('body').style.width = port2+'px';
+document.getElementById('cuerpo').style.height = port+'px';
+//document.getElementById('cuerpo').style.width = port2+'px';
+//document.getElementById('encabezado').style.width = port2+'px';
+//document.getElementById('pie').style.width = port2+'px';
+
+</script>
